@@ -17,11 +17,11 @@ var corsOptions = {
 
 const PORT = process.env.PORT || 9000;
 
-app.get('/', cors(corsOptions), (req, res) => {
+app.get('/api/', cors(corsOptions), (req, res) => {
     res.send("Hello");
 })
 
-app.post('/submit', cors(corsOptions), async (req, res) => {
+app.post('/api/submit', cors(corsOptions), async (req, res) => {
     const data = req.body;
     // console.log(data);
     
