@@ -24,9 +24,10 @@ export default defineConfig({
     proxy: {
       '/api' : {
         // target: 'http://localhost:9000', // Backend server address
-        target: 'https://cp-analyze.vercel.app/', // Backend server address
+        target: 'https://cp-analyze.vercel.app', // Backend server address
         changeOrigin: true, // Update the host header to the target URL
         secure: false, // Allow proxying to SSL backend servers with self-signed certificates
+        rewrite: (path) => path.replace(/^\/api/, ''),
       },
     },
   },
