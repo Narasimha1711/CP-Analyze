@@ -16,7 +16,7 @@ var corsOptions = {
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 
-app.options('*', cors()) 
+app.options('https://cp-analyzer.vercel.app/', cors()) 
 const PORT = process.env.PORT || 9000;
 
 app.get('/', (req, res) => {
