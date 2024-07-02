@@ -17,11 +17,14 @@ var corsOptions = {
 
 const PORT = process.env.PORT || 9000;
 
-app.get('/api/', cors(corsOptions), (req, res) => {
+app.get('https://cp-analyze.vercel.app', (req, res) => {
+    res.send('/');
+})
+app.get('https://cp-analyze.vercel.app/api/', cors(corsOptions), (req, res) => {
     res.send("Hello");
 })
 
-app.post('/api/submit', cors(corsOptions), async (req, res) => {
+app.post('https://cp-analyze.vercel.app/api/submit', cors(corsOptions), async (req, res) => {
     const data = req.body;
     // console.log(data);
     

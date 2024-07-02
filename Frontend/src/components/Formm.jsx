@@ -27,7 +27,7 @@ function Formm() {
 
     try {
 
-    const response = await axios.post('/api/submit', {
+    const response = await axios.post('https://cp-analyze.vercel.app/api/submit', {
       email: email,
       password: password,
       leetcode: leetcode
