@@ -7,14 +7,16 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(express.json());
-app.options('*', cors()) 
 
 
 var corsOptions = {
     origin: ['https://cp-analyzer.vercel.app/', 'http://localhost:5173'],
+    methods: ['GET', 'POST', 'OPTIONS'],
+    allowedHeaders: ['Content-Type'],
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-  }
+}
 
+app.options('*', cors()) 
 const PORT = process.env.PORT || 9000;
 
 app.get('/', (req, res) => {
