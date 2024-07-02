@@ -11,20 +11,20 @@ app.options('*', cors())
 
 
 var corsOptions = {
-    origin: ['https://cp-analyzer.vercel.app/', 'http://localhost:5173/'],
+    origin: ['https://cp-analyzer.vercel.app/', 'http://localhost:5173'],
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
   }
 
 const PORT = process.env.PORT || 9000;
 
-app.get('https://cp-analyze.vercel.app', (req, res) => {
+app.get('/', (req, res) => {
     res.send('/');
 })
-app.get('https://cp-analyze.vercel.app/api/', cors(corsOptions), (req, res) => {
+app.get('/api/', cors(corsOptions), (req, res) => {
     res.send("Hello");
 })
 
-app.post('https://cp-analyze.vercel.app/api/submit', cors(corsOptions), async (req, res) => {
+app.post('/api/submit', cors(corsOptions), async (req, res) => {
     const data = req.body;
     // console.log(data);
     
