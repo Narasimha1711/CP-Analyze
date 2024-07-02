@@ -11,7 +11,7 @@ app.options('*', cors())
 
 
 var corsOptions = {
-    origin: 'https://cp-analyzer.vercel.app/',
+    origin: ['https://cp-analyzer.vercel.app/', 'http://localhost:5173/'],
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
   }
 
