@@ -5,7 +5,14 @@ const axios = require('axios')
 const cors = require('cors')
 const app = express();
 
-app.use(bodyParser.json());
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', req.headers.origin); // Allow requests from the same origin
+    res.header('Access-Control-Allow-Credentials', true); // Allow requests with credentials (if applicable)
+    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
+    next();
+  });
+  
 app.use(express.json());
 
 
@@ -15,6 +22,9 @@ var corsOptions = {
     allowedHeaders: ['Content-Type'],
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
+
+
+  
 
 app.options('https://cp-analyzer.vercel.app/', cors()) 
 const PORT = process.env.PORT || 9000;
