@@ -23,3 +23,8 @@ To run the CP Analyzer locally, follow these steps:
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/cp-analyzer.git
+
+   cd cp-analyzer
+   cd backend
+   npm install
+
