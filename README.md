@@ -3,16 +3,6 @@
 ## Overview
 The **CP Analyzer** is a web-based application designed to aggregate and display detailed profiles of users from competitive programming platforms, specifically Codeforces and LeetCode. The application provides users with insights into their coding progress, problem-solving trends, and skill levels through visual representations.
 
-## Table of Contents
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [API Integration](#api-integration)
-- [Visualizations](#visualizations)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
 
 ## Features
 - Aggregates user profiles from Codeforces and LeetCode.
@@ -21,10 +11,10 @@ The **CP Analyzer** is a web-based application designed to aggregate and display
 - Centralized platform for tracking and analyzing competitive programming progress.
 
 ## Technologies Used
-- **Frontend**: ReactJS, EJS
+- **Frontend**: ReactJS
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB
-- **APIs**: Codeforces API, LeetCode API
+- **APIs**: Codeforces API, LeetCode API, Codechef API
 - **Visualization Libraries**: Chart.js
 
 ## Installation
