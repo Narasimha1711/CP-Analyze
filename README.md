@@ -3,7 +3,6 @@
 ## Overview
 The **CP Analyzer** is a web-based application designed to aggregate and display detailed profiles of users from competitive programming platforms, specifically Codeforces and LeetCode. The application provides users with insights into their coding progress, problem-solving trends, and skill levels through visual representations.
 
-
 ## Features
 - Aggregates user profiles from Codeforces and LeetCode.
 - Displays visual representations of user progress, including graphs and charts.
@@ -23,16 +22,12 @@ To run the CP Analyzer locally, follow these steps:
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/cp-analyzer.git
-2. Navigate to the project directory:
-3. 
-   cd cp-analyzer
-   cd backend
-   npm install
-   npm start
 
-   cd frontend
-   npm install
-   npm start
-     
+cd cp-analyzer
+cd backend
+npm install
+npm start
 
-
+cd ../frontend
+npm install
+npm start
